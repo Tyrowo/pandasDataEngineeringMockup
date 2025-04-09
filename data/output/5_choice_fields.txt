@@ -1,0 +1,25 @@
+CHOICE FIELD VALUES FOR EACH TABLE
+
+Vertical: 
+{'Business Services', 'Healthcare', nan, 'Private Equity', 'Consumer Retail', 'Invest. Bank'}
+
+Sub Vertical: 
+{'Consumer Services', 'BPO', 'Pharma / Pharma Services', 'Transportation & Logistics', 'IT Services', 'Other', None, 'Retail', 'Banks / Lending', 'Industrial & Environmental Services', 'Financial Services', 'Distribution', 'Financial Technology', 'Consumer Products', 'Healthcare', 'Data & Information Services', 'Provider Outsourcing', 'Facility Services', 'Payor Services', 'Industrials', 'Building Products', 'Specialty Mfg And Distribution', 'Asset Management', 'Medical Devices / Products', 'Technology Services', 'Payments', 'Food & Beverage', 'Tranportation & Logistics', 'Industrial', 'Professional Services', nan, 'Specialty Distribution', 'Facilities Services', 'Education Services', 'Insurance', 'Retail and Consumer Health', 'Human Capital Services', 'Providers', 'Consumer Brands', 'Industrial Products', 'Consumer & Retail', 'Restaurants', 'Testing, Inspection & Certificaiton', 'Marketing Services'}
+
+Preferred Contact Method: 
+{'Email', 'Business Phone', nan, 'Cell Phone'}
+
+(Deal) Status: 
+{'Closed By THL', 'Portfolio Company', 'Add On', 'On Hold', 'Dead', nan, 'Active', 'Passed/Dead'}
+
+Portfolio Company Status: 
+{'Current Investment', nan}
+
+Active Stage: 
+{'CIM Received', 'Live Diligence', 'New deal', 'CIM received', 'LOI Submitted', nan, 'Management Presentation', 'IOI Submitted', 'New Deal'}
+
+Attendee Status: 
+{'Declined', 'Checked In', "RSVP'd", 'No Show'}
+
+Marketing Events: 
+{'Leaders and Partners Dinner', '2019 Market Re-Cap'}
