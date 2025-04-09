@@ -1,0 +1,28 @@
+Dear Client, 
+
+My name is Tyler Crews, and I am a Data Migration Consultant working for Intapp. I have recently been assigned your account, and will be responsible for facilitating the migration of the data from Client Business into the Intapp DealCloud system.
+Before I can get started, I just need you to answer a few clarifying questions about the datasets you've sent over.
+
+1. The main discrepancy between your Consumer Retail and Healthcare Pipeline and your Business Services Pipeline data is the decomposition of the company's LTM EBITDA data across several columns. In the Business Services pipeline you include historic EBITDA data, but do not use the main EBITDA column at all. 
+Is it possible to consolidate these columns? Is the historic data necessary in the BS Pipleine file, or can just the most recent EBITDA be kept so it matches the CR&H Pipeline?
+
+2. Some fields have highlighting/outlining/colored text, could you review these categories and see if there is any information that needs to be retained from the styling of your data?
+2.a. Consumer Retail and Healthcare Pipeline - Active Stage cells outlined in red
+2.b. Consumer Retail and Healthcare Pipeline - some rows have highlighted cells
+2.c. Business Services Pipeline - Enterprise Value some cells have blue text.
+
+3. I was curious about the importance of the Coverage Person, and if those coverage people should be maintained in some kind of data table. They don't seem to have enough individual information to merit inclusion in the Contacts table - is that because they are just company employees? 
+
+4. If there are duplicate company names in the Pipeline files that are added on different dates, are they necessarily different companies? Or can the same company be re-added to the pipeline multiple times?
+If Company Name + Date Added is sufficient to uniquely identify each company that is great. If not I will need some advisement on which trait combination can uniquely identify the company, something like "Company Name, Banker, and Current Owner."
+
+5. In your included data for marketing participants (the event attendees file), the same person can be registered for multiple events. There are a few way to handle these duplicates, could you choose between these options:
+5.a. For attendees with multiple events only keep the most recent event so that you can minimize the upkeep of the table and only see the most pertinent information for each attendee (especially if the only important fields are just the name and email). 
+5.b. Create a table with every event as its own column to maximize data retention about attendance, but this would require more upkeep of your table and create more sparse information for each user as time goes on and you host more events.
+5.c. Combine all of the attendances in a way that makes sense - Have a column that specifies whether an attendee has attended ANY event, and then you could have an open text field to list all of the events they successfully attended. This would combine all of the attendance options except "Checked In" to turn to False. 
+
+6. I would love some more insight into the relationships of your private equity companies. It is clear that the companies listed in this file are not one of the two verticals. Are these PE Companies companies that you would like to have listed in your company's relationships? If so, would it be satisfactory to include them in the Company table but as a third vertical type called "Private Equity?"
+
+Thanks for your time. I look forward to your correspondence at your earliest convenience. 
+Please feel free to reach out to me with any questions about the process.
+-Tyler Crews
