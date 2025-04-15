@@ -1,9 +1,23 @@
-Dear Client, 
+Dear Client,
 
-My name is Tyler Crews, and I am a Data Migration Consultant working for Intapp. I have recently been assigned your account, and will be responsible for facilitating the migration of the data from Client Business into the Intapp DealCloud system.
-Before I can get started, I just need you to answer a few clarifying questions about the datasets you've sent over.
+My name is Tyler Crews, and I am a Data Migration Consultant working for Intapp. I have recently been assigned your account, and will be responsible for facilitating the migration of the data from The Company into the Intapp DealCloud system.
+I've gotten a headstart looking at your data based on the scoping notes I was sent over, but I need you to answer a few clarifying questions about the datasets you've sent over.
 
-1. The main discrepancy between your Consumer Retail and Healthcare Pipeline and your Business Services Pipeline data is the decomposition of the company's LTM EBITDA data across several columns. In the Business Services pipeline you include historic EBITDA data, but do not use the main EBITDA column at all. 
+First and foremost, at Intapp we work hard to make sure we retain as much of your data as possible through the migration. I have created a quick rough draft for how your data tables will be constructed.
+
+Companies Table:
+[[image.png]]
+Contacts Table:
+[[image.png]]
+Deals Table:
+[[image.png]]
+Marketing Participants Table:
+[[image.png]]
+
+That being said my first question is whether all of the fields sent in these documents are desired to keep through the migration. If there are any fields that you do not want to carry over please let me know a list of them, otherwise I will err on the side of keeping all of them. They can always be removed later.
+
+I also have a few other more specific questions:
+1. The main discrepancy between your Consumer Retail and Healthcare Pipeline and your Business Services Pipeline data is the decomposition of the company's LTM EBITDA data across several years. In the Business Services pipeline you include this historic EBITDA data, but do not use the main EBITDA column at all.
 Is it possible to consolidate these columns? Is the historic data necessary in the BS Pipleine file, or can just the most recent EBITDA be kept so it matches the CR&H Pipeline?
 
 2. Some fields have highlighting/outlining/colored text, could you review these categories and see if there is any information that needs to be retained from the styling of your data?
@@ -11,18 +25,15 @@ Is it possible to consolidate these columns? Is the historic data necessary in t
 2.b. Consumer Retail and Healthcare Pipeline - some rows have highlighted cells
 2.c. Business Services Pipeline - Enterprise Value some cells have blue text.
 
-3. I was curious about the importance of the Coverage Person, and if those coverage people should be maintained in some kind of data table. They don't seem to have enough individual information to merit inclusion in the Contacts table - is that because they are just company employees? 
+3. I was curious about the importance of the Coverage Person, and if those coverage people should be maintained in some kind of data table. They don't seem to have enough individual information to merit inclusion in the Contacts table - is that because they are just company employees?
 
-4. If there are duplicate company names in the Pipeline files that are added on different dates, are they necessarily different companies? Or can the same company be re-added to the pipeline multiple times?
-If Company Name + Date Added is sufficient to uniquely identify each company that is great. If not I will need some advisement on which trait combination can uniquely identify the company, something like "Company Name, Banker, and Current Owner."
+4. From my initial review there appear to be no duplicate company names in any of your pipeline data. But if a duplicately named company were introduced to the pipeline data, how would it be uniquely identified from a company that already exists? Can a company go through the pipeline multiple times?
 
-5. In your included data for marketing participants (the event attendees file), the same person can be registered for multiple events. There are a few way to handle these duplicates, could you choose between these options:
-5.a. For attendees with multiple events only keep the most recent event so that you can minimize the upkeep of the table and only see the most pertinent information for each attendee (especially if the only important fields are just the name and email). 
-5.b. Create a table with every event as its own column to maximize data retention about attendance, but this would require more upkeep of your table and create more sparse information for each user as time goes on and you host more events.
-5.c. Combine all of the attendances in a way that makes sense - Have a column that specifies whether an attendee has attended ANY event, and then you could have an open text field to list all of the events they successfully attended. This would combine all of the attendance options except "Checked In" to turn to False. 
+5. I would love some more insight into the relationships of your public equity companies. It is clear that the companies listed in this file are not one of the two verticals. Are these PE Companies companies that you would like to have listed in your company's relationships? If so, would it be satisfactory to include them in the Company table but as a third vertical type called "Private Equity?"
 
-6. I would love some more insight into the relationships of your private equity companies. It is clear that the companies listed in this file are not one of the two verticals. Are these PE Companies companies that you would like to have listed in your company's relationships? If so, would it be satisfactory to include them in the Company table but as a third vertical type called "Private Equity?"
+6. For the field "Invest. Bank" is that short for "Investing Bank" or "Investment Bank?" Would it be more desireable to leave it as is or change it to an unabbreviated field name?
 
-Thanks for your time. I look forward to your correspondence at your earliest convenience. 
-Please feel free to reach out to me with any questions about the process.
--Tyler Crews
+7. I have proposed which fields will be carried into the deals column, are there any that should be in the company data instead? And the reverse - any fields I have labeled as company table data that should be in fields?
+
+Thanks for your time. I look forward to your correspondence at your earliest convenience.
+Tyler Crews
